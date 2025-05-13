@@ -1,13 +1,7 @@
-import BannerCarousel from "@/components/carousels/BannerCarousel";
+import BannerSlider from "@/components/sliders/BannerSliders";
 import styles from "./page.module.scss";
 import Header from "@/components/layout/Header";
 
-async function getCarouselData() {
-  const res = await fetch('https://api.b-e.az/task/big-sliders', {
-    cache: 'force-cache', 
-  });
-  return res.json();
-}
 
 async function getBigSlidersData() {
   const res = await fetch('https://api.b-e.az/task/big-sliders', {
@@ -39,7 +33,7 @@ export default async function HomePage() {
   return (
     <div className={styles.page}>
       <Header/>
-      <BannerCarousel/>
+      <BannerSlider sliders={slidersData}/>
     </div>
   );
 }

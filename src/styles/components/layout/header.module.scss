@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     gap: 9px;
-    margin: 5px 20px 27px;
+    margin: 5px $mobile-margin-inline 27px;
     .topNav{
         background-color: var(--nav-background);
         padding-inline: 18px 9px;
