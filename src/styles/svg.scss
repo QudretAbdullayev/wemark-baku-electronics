@@ -1,0 +1,66 @@
+@import './abstracts/variables.scss';
+
+.hamburgerSVG{
+  line{
+    stroke: var(--hamburger-color);
+  }
+  @media (min-width:$screen-size) {
+    display: none;
+  }
+}
+
+.arrowDownSVG{
+  stroke: var(--text-svg-color);
+  width: 10px;
+  height: 7px;
+}
+
+.moonSVG, .sunSVG{
+  width: 11.960000038146973px;
+  height: 11.960000038146973px;
+  transition: opacity 0.4s ease;
+  @media (min-width:$screen-size) {
+    width: 14.03999996185308px;
+    height: 14.03999996185308px;
+  }
+}
+
+.bakuElectronicsSVG{
+  width: 45px;
+  height: 45px;
+  transition: opacity 0.4s ease;
+  @media (min-width:$screen-size) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.categorySVG{
+  width: 16.014034271240234px;
+  height: 16.014034271240234px;
+  @media (min-width:$screen-size) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.searchSVG{
+  position: absolute;
+  width: 12.115049362182617px;
+  height: 13.296924591064453px;
+  opacity: 0.5;
+  top: 14px;
+  right: 11.88px;
+  g{
+    ellipse, path{
+      stroke: var(--text-svg-color);
+    }
+  }
+  @media (min-width:$screen-size) {
+    width: 19.759450912475586px;
+    height: 20px;
+    opacity: 0.6;
+    top: 14px;
+    right: 11.88px;
+  }
+}

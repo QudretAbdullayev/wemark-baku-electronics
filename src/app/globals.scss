@@ -1,0 +1,115 @@
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --input-color: #3f3f3f;
+  --hamburger-color: #3f3f3f;
+  --text-svg-color: #333333;
+  --nav-background: #F5F5F5;
+  --catalog-background: #333333;
+  --light-mode-background: #333333;
+  --light-mode-circle: #FFFFFF;
+  --white-text-color: #FFFFFF;
+
+  --black-color-1: #333333;
+  --grey-color-1: #e1e1e1;
+  --white-color-1: #f5f5f5;
+  --red-color-1: #ea2427;
+  --pink-color-1: #f9bebf;
+  --light-pink-color-1: #fce3e3;
+}
+
+[data-theme="dark"] {
+  --background-color: #1a1a1a;
+  --input-color: #FFFFFF;
+  --hamburger-color: #ffffff;
+  --text-svg-color: #ffffff;
+  --nav-background: #2B2B2B;
+  --catalog-background: #2B2B2B;
+  --light-mode-background: #1a1a1a;
+  --light-mode-circle: #FFFFFF;
+  --white-text-color: #FFFFFF;
+
+  --black-color-1: #1a1a1a;
+  --grey-color-1: #2b2b2b;
+  --white-color-1: #3f3f3f;
+  --red-color-1: #ea2427;
+  --pink-color-1: #f9bebf;
+  --light-pink-color-1: #fce3e3;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/public/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+body {
+  background-color: var(--background-color);
+  font-family: 'SF Pro Display', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  a{
+    text-decoration: none;
+  }
+}
