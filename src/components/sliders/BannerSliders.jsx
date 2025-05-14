@@ -19,6 +19,7 @@ const BannerSliders = (sliders) => {
               disableOnInteraction: false
             }}
             loop={true}
+            spaceBetween={10}
             slidesPerView={1}
             navigation={{
               prevEl: `.${styles.cardsLeftButton}`,
