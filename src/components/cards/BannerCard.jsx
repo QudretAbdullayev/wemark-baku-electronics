@@ -9,8 +9,8 @@ const BannerCard = ({url, bannerPicture}) => {
         <Link href={url}>
             <Image
                 alt={url}
-                fill
-                style={{ objectFit: 'cover' }} 
+                layout="fill"
+                style={{ objectFit: 'cover'}} 
                 src={bannerPicture}
             />
         </Link>

@@ -1,6 +1,8 @@
 @import '../../abstracts/variables.scss';
 
-.catalog{
+.catalog{ 
+    cursor: pointer;
+    animation-duration: 0ms;
     height: 40px;
     padding-inline: 13px;
     box-shadow: 0px 8.01px 15.21px 0px #00000008;
@@ -23,9 +25,14 @@
 }
 
 @media (min-width:$screen-size) {
-    .catalog{
-        height: 45px;
+    .catalog{ 
+        animation-duration: 0ms;
+        height: 50px;
+        padding: 16px 18.5px 16px 19.5px;
+        box-shadow: 0px 8.01px 15.21px 0px #00000008;
         border-radius: 25px;
+        gap: 10px;
         font-size: 16px;
+    
     }
 }

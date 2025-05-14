@@ -73,3 +73,29 @@
     height: 24.48979187011728px;
   }
 }
+
+.profileSVG{
+  path,rect{
+    stroke: var(--text-svg-color);
+  }
+}
+
+.heartSVG{
+  path{
+    stroke: var(--text-svg-color);
+  }
+}
+.compareSVG{
+  path{
+    fill: var(--text-svg-color);
+  }
+}
+.basketSVG{
+  path{
+    stroke: var(--text-svg-color);
+    &:last-child, &:nth-child(3){
+      fill: var(--text-svg-color);
+    }
+  }
+  
+}

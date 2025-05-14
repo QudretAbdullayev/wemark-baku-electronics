@@ -1,0 +1,52 @@
+@import '../../abstracts/variables.scss';
+
+.userButtons{
+    display: none;
+}
+
+@media (min-width: $screen-size) {
+    .userButtons{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        .userButton{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--nav-background);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0px 13.17px 25.02px 0px #00000008;
+            border-radius: 12px;
+            svg{
+                width: 25px;
+                height: 25px;
+            }
+            .counter{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+                width: 23.707317352294922px;
+                height: 15.804877281188965px;
+                top: -4px;
+                right: -6px;
+                border-radius: 18.44px;
+                font-family: "Manrope";
+                font-weight: 800;
+                font-size: 10.54px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                vertical-align: middle;
+                background-color: var(--counter-background);
+                color: var(--counter-color);
+            }
+        }
+    }
+}

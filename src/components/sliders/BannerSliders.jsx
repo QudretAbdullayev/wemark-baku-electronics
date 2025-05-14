@@ -12,25 +12,26 @@ const BannerSliders = (sliders) => {
   return (
     <section className={styles.sliders}>
         <Swiper
-            modules={[Navigation, Autoplay]}
-            speed={1000}
-            autoplay={{
-              delay:4000,
-              disableOnInteraction: false
-            }}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={1}
-            navigation={{
-              prevEl: `.${styles.cardsLeftButton}`,
-              nextEl: `.${styles.cardsRightButton}`,
-            }}
-            breakpoints={{
-                1024: {
-                slidesPerView: 1.29,
-                spaceBetween: 30
-                },
-            }}
+          className={styles.swiperEdit}
+          modules={[Navigation, Autoplay]}
+          speed={1000}
+          autoplay={{
+            delay:4000,
+            disableOnInteraction: false
+          }}
+          loop={true}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation={{
+            prevEl: `.${styles.cardsLeftButton}`,
+            nextEl: `.${styles.cardsRightButton}`,
+          }}
+          breakpoints={{
+            1024: {
+              slidesPerView: 1.29,
+              spaceBetween: 30
+              },
+          }}
         >
           {(sliders.sliders!==null && sliders.sliders.length>0) && sliders?.sliders?.map((slider, index)=> (
             <SwiperSlide key={index}>

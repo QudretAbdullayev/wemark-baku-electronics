@@ -57,7 +57,8 @@ const Header = () => {
           <Catalog/>
           <Search/>
           {/* <City/>
-          <UserButtons/> */}
+           */}
+          <UserButtons/>
         </nav>
     </header>
   )
