@@ -223,7 +223,7 @@
                 }
             }
             .descBox{
-                height: 66px;
+                height: 48px;
                 gap: 7.18px;
                 display: flex;
                 flex-direction: column;
@@ -261,12 +261,12 @@
                     }
                 }
                 .title{
-                    -webkit-line-clamp: 3;
+                    -webkit-line-clamp: 2;
                     font-size: 14px;
                 }
             }
             .priceBox{
-                padding: 10px 3px 22.4px 3px;
+                padding: 20px 3px 22.4px 3px;
                 align-items: flex-end;
                 .prices, .perMonth{
                     justify-content: flex-end;
