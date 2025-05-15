@@ -48,7 +48,6 @@
   position: absolute;
   width: 12.115049362182617px;
   height: 13.296924591064453px;
-  opacity: 0.5;
   top: 14px;
   right: 11.88px;
   g{
@@ -65,6 +64,11 @@
   }
 }
 
+.arrowDownSearchSVG{
+  path{
+    stroke: var(--text-svg-color);
+  }
+}
 .arrowRightBannerSVG, .arrowLeftBannerSVG{
   width: 14.693875312805176px;
   height: 14.693875312805176px;

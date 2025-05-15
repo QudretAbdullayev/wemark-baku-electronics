@@ -51,7 +51,7 @@
                     white-space: nowrap;
                     border: none;
                     outline: none;
-                    font-weight: 700;
+                    font-weight: 500;
                     font-size: 12px;
                     line-height: 100%;
                     letter-spacing: 0%;
@@ -63,7 +63,11 @@
                     opacity: 0.5;
                 }
                 .active{
+                    font-weight: 700;
                     color: var(--special-offer-desc-color);
+                }
+                button:hover{
+                    opacity: 1;
                 }
             }
         }

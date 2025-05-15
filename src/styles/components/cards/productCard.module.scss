@@ -89,6 +89,11 @@
                 line-height: 100%;
                 letter-spacing: 0%;
                 color: var(--special-offer-desc-color);
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         .priceBox{
@@ -218,7 +223,7 @@
                 }
             }
             .descBox{
-                height: 39px;
+                height: 66px;
                 gap: 7.18px;
                 display: flex;
                 flex-direction: column;
@@ -256,11 +261,12 @@
                     }
                 }
                 .title{
+                    -webkit-line-clamp: 3;
                     font-size: 14px;
                 }
             }
             .priceBox{
-                padding: 26px 3px 22.4px 3px;
+                padding: 10px 3px 22.4px 3px;
                 align-items: flex-end;
                 .prices, .perMonth{
                     justify-content: flex-end;

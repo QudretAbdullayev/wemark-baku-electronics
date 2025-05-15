@@ -6,21 +6,21 @@ import SpecialOffers from "@/components/grid/SpecialOffers";
 
 async function getBigSlidersData() {
   const res = await fetch('https://api.b-e.az/task/big-sliders', {
-    cache: 'force-cache', 
+    cache: 'no-store', 
   });
   return res.json();
 }
 
 async function getInfoCardsData() {
   const res = await fetch('https://api.b-e.az/task/features', {
-    cache: 'force-cache', 
+    cache: 'no-store', 
   });
   return res.json();
 }
 
 async function getProductsData() {
   const res = await fetch('https://api.b-e.az/task/special-offer', {
-    cache: 'force-cache', 
+    cache: 'no-store', 
   });
   return res.json();
 }

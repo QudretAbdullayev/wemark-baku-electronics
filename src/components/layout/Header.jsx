@@ -12,8 +12,10 @@ import Catalog from '../buttons/Catalog'
 import Search from '../inputs/Search'
 import City from '../dropdowns/City'
 import UserButtons from '../buttons/UserButtons'
+import { usePathname } from 'next/navigation'
 const Header = () => {
 
+  const pathname = usePathname();
   // dark-light hissəsi
   const [theme, setTheme] = useState('light');
   useEffect(() => {
@@ -35,11 +37,11 @@ const Header = () => {
         <nav className={styles.topNav}>
             <Hamburger/>
             <div className={styles.navLinks}>
-                <Link href="/kampaniyalar">Kampaniyalar</Link>
-                <Link href="/korporativ-satislar">Korporativ satışlar</Link>
-                <Link href="/magazalar">Mağazalar</Link>
-                <Link href="/ayliq-odenis">Aylıq ödəniş</Link>
-                <Link href="/diger">Digər</Link>
+                <Link className={pathname === "/kampaniyalar" ? `${styles.active}` : `${styles.deactive}`} href="/kampaniyalar">Kampaniyalar</Link>
+                <Link className={pathname === "/korporativ-satislar" ? `${styles.active}` : `${styles.deactive}`} href="/korporativ-satislar">Korporativ satışlar</Link>
+                <Link className={pathname === "/magazalar" ? `${styles.active}` : `${styles.deactive}`} href="/magazalar">Mağazalar</Link>
+                <Link className={pathname === "/ayliq-odenis" ? `${styles.active}` : `${styles.deactive}`} href="/ayliq-odenis">Aylıq ödəniş</Link>
+                <Link className={pathname === "/diger" ? `${styles.active}` : `${styles.deactive}`} href="/diger">Digər</Link>
             </div>
             <div className={styles.right}>
                 <Link className={styles.old} href='https://www.bakuelectronics.az/'>Əvvəlki versiyaya keçid</Link>
