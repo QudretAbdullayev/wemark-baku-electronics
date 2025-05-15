@@ -47,7 +47,11 @@
                 background-color: var(--counter-background);
                 color: var(--counter-color);
             }
+            &:hover{
+                background-color: var(--info-card-color);
+            }
         }
+
         .compare{
             svg{
                 path{

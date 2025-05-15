@@ -2,6 +2,7 @@
 
 .productCard{
     height: 263px;
+    cursor: pointer;
     .container{
         box-shadow: 0px 8.2px 11.79px 0px #00000003;
         border-radius: 10px;
@@ -22,6 +23,7 @@
             height: 120px;
             overflow: hidden;
             img{
+                padding: 15px;
                 position: static !important;
                 height: 120px !important;
                 width: auto !important;
@@ -64,6 +66,14 @@
                     height: 11px;
                     path{
                         stroke: var(--product-compare-color);
+                    }
+                }
+                &:hover{
+                    background-color: var(--compare-color-hover);
+                    svg{
+                        path{
+                            stroke: var(--red-color-1);
+                        }
                     }
                 }
             }
@@ -136,6 +146,17 @@
                     height: 14px;
                 }
             }
+            .addBasket:hover, .heart:hover, .addBasketActive, .heartActive{
+                background-color: var(--red-color-1);
+                span{
+                    color: var(--white-text-color);
+                }
+                svg{
+                    path{
+                        stroke: var(--white-text-color);
+                    }
+                }
+            }
             .addBasket{
                 width: 100%;
                 border-radius: 12px;
@@ -176,6 +197,7 @@
                 border-radius: 20px;
                 height: 218px;
                 img{
+                    padding: 20px;
                     height: 218px !important;
                 }
                 .discountPercantage{
@@ -222,6 +244,15 @@
                     }
                     .comment{
                         gap: 3.7px;
+                        svg{
+                            path{
+                                &:first-child{
+                                    stroke: var(--comment-color);
+                                    fill: var(--comment-color);
+                                }
+                            }
+
+                        }
                     }
                 }
                 .title{

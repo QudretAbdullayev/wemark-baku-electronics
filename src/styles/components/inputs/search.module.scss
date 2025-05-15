@@ -21,8 +21,15 @@
         border-radius: 10px;
         padding-inline: 12px 30px;
         color: var(--input-color);
-        opacity: 0.5;
+        &::placeholder{
+            color: var(--input-color);
+            opacity: 0.5;
+        }
     }
+    &:hover{
+        background-color: var(--info-card-color);
+    }
+
 }
 
 @media (min-width: $screen-size) {

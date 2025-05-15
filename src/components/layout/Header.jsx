@@ -58,8 +58,7 @@ const Header = () => {
           <Link href='/'><BakuElectronics/></Link>
           <Catalog/>
           <Search/>
-          {/* <City/>
-           */}
+          <City/>
           <UserButtons/>
         </nav>
     </header>

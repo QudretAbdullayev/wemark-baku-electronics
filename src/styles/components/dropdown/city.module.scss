@@ -1,39 +1,37 @@
 @import '../../abstracts/variables.scss';
 
-.searchButton{
-    width: 100%;
-    height: 40px;
-    position: relative;
-    background-color: var(--nav-background);
-    border-radius: 10px;
-    input{
-        background-color: transparent;
-        height: 40px;
-        box-shadow: 0px 9.82px 18.66px 0px #00000008;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 100%;
-        letter-spacing: 0%;
-        vertical-align: middle;
-        width: 100%;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        padding-inline: 12px 30px;
-        color: var(--input-color);
-        opacity: 0.5;
-    }
+.cityDropdown{
+    display: none;
 }
 
 @media (min-width: $screen-size) {
-    .searchButton{
+    .cityDropdown{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 13px 15px 30px;
         height: 50px;
-        input{
-            height: 50px;
-            box-shadow: initial;
+        min-width: 253px;
+        width: 253px;
+        max-width: 253px;
+        white-space: nowrap;
+        position: relative;
+        background-color: var(--nav-background);
+        border-radius: 10px;
+        box-shadow: 0px 9.82px 18.66px 0px #00000008;
+        .cityName{
+            opacity: 0.5;
+            color: var(--input-color);
+            font-weight: 400;
             font-size: 16px;
-            border-radius: 12px;
-            padding-inline: 20px 24.24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            background-color: transparent;
+        }
+        &:hover{
+            background-color: var(--info-card-color);
         }
     }
 }
