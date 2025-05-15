@@ -4,6 +4,7 @@ import Chat from '@/svg/Chat'
 import Image from 'next/image'
 import Heart from '@/svg/Heart'
 import AddBasket from '@/svg/AddBasket'
+import Compare from '@/svg/Compare'
 
 const ProductCard = ({product}) => {
   return (
@@ -15,8 +16,8 @@ const ProductCard = ({product}) => {
             fill
             src={product.image}
           />
-          <span className={styles.discountPercantage}></span>
-          <span className={styles.compare}></span>
+          <span className={styles.discountPercantage}>-{Math.round(Number(product.discount)/product.price * 100)}%</span>
+          <span className={styles.compare}><Compare/></span>
         </div>
         <div className={styles.descBox}>
           <div className={styles.ratingComment}>

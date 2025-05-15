@@ -29,6 +29,44 @@
                 width: auto;
                 height: auto;
             }
+            .discountPercantage{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 7px;
+                left: 7px;
+                width: 33px;
+                height: 20px;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 8px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                text-align: center;
+                background-color: var(--red-color-1);
+                color: var(--white-text-color);
+            }
+            .compare{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 7px;
+                right: 7px;
+                width: 25px;
+                height: 20px;
+                box-shadow: 0px 9px 25px 0px #00000017;
+                background-color: var(--product-compare-background);
+                border-radius: 20px;
+                svg{
+                    width: 11px;
+                    height: 11px;
+                    path{
+                        stroke: var(--product-compare-color);
+                    }
+                }
+            }
         }
         .descBox{
             height: 28px;
@@ -140,9 +178,28 @@
                 img{
                     height: 218px !important;
                 }
+                .discountPercantage{
+                    left: 12px;
+                    width: 51px;
+                    height: 30px;
+                    font-size: 10px;
+                }
+                .compare{
+                    right: 12px;
+                    width: 42px;
+                    height: 30px;
+                    border-radius: 32px;
+                    svg{
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
             }
             .descBox{
                 height: 39px;
+                gap: 7.18px;
+                display: flex;
+                flex-direction: column;
                 .ratingComment{
                     display: flex;
                     gap: 12.87px;
