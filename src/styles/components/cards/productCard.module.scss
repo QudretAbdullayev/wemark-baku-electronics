@@ -17,7 +17,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            margin: 20px 0 -11px 0;
+            margin: 20px 0 -15px 0;
             border-radius: 10px;
             height: 120px;
             overflow: hidden;
@@ -31,6 +31,7 @@
             }
         }
         .descBox{
+            height: 28px;
             .ratingComment{
                 display: none;
             }
@@ -45,34 +46,194 @@
         .priceBox{
             padding: 16px 0 18.26px 0;
             display: flex;
+            height: max-content;
             .prices, .perMonth{
                 display: flex;
                 flex-direction: column;
-                gap: 0.6px;
+                gap: 1.74px;
                 .price, .month{
                     font-weight: 500;
                     font-size: 10px;
                     line-height: 100%;
                     letter-spacing: 0%;
                     text-decoration: line-through;
+                    color: var(--discount-price-color);
                 }
                 .discountedPrice, .monthPrice{
                     font-weight: 700;
                     font-size: 12px;
                     line-height: 109.00000000000001%;
                     letter-spacing: 0%;
+                    color: var(--special-offer-desc-color);
                 }
             }
-            .price{
+            .prices{
                 padding-right: 11.27px;
             }
             .perMonth{
+                border-left: 0.51px solid var(--product-card-price-line);
                 padding-left: 11.27px;
             }
             .line{
-                width: 0.51px;
-                height: 100%;
-                background-color: #DEDEDE;
+                display: none;
+            }
+        }
+        .buttonBox{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            padding-bottom: 14px;
+            .addBasket, .heart{
+                cursor: pointer;
+                background-color: var(--product-add-basket);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                outline: none;
+                height: 35px;
+                svg{
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            .addBasket{
+                width: 100%;
+                border-radius: 12px;
+                gap: 9px;
+                span{
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: var(--special-offer-desc-color);
+                }
+                .desktop{
+                    display: none;
+                }
+            }
+            .heart{
+                border-radius: 10px;
+                min-height: 35px;
+                min-width: 35px;
+                max-height: 35px;
+                max-width: 35px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-size) {
+    .productCard{
+        height: 419px;
+        .container{
+            border-radius: 24px;
+            height: 380px;
+            padding-inline: 20px;
+            .imageBox{
+                transform: translateY(-39px);
+                border-width: 1px;
+                margin: 39px 0 -30px 0;
+                border-radius: 20px;
+                height: 218px;
+                img{
+                    height: 218px !important;
+                }
+            }
+            .descBox{
+                height: 39px;
+                .ratingComment{
+                    display: flex;
+                    gap: 12.87px;
+                    .rating,.comment{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: var(--special-offer-desc-color);
+                        svg{
+                            width: 14.817028045654297px;
+                            height: 14.817028045654297px;
+                        }
+                    }
+                    .rating{
+                        gap: 1.85px;
+                    }
+                    .comment{
+                        gap: 3.7px;
+                    }
+                }
+                .title{
+                    font-size: 14px;
+                }
+            }
+            .priceBox{
+                padding: 26px 3px 22.4px 3px;
+                align-items: flex-end;
+                .prices, .perMonth{
+                    justify-content: flex-end;
+                    gap: 0.6px;
+                    .price, .month{
+                        font-size: 14px;
+                    }
+                    .discountedPrice, .monthPrice{
+                        font-size: 20px;
+                    }
+                }
+                .prices{
+                    padding-right: 15px;
+                }
+                .perMonth{
+                    border-left: none;
+                    padding-left: 15px;
+                }
+                .line{
+                    display: block;
+                    border-left: 0.93px solid var(--product-card-price-line);
+                    height: 34.26437759399417px;
+                }
+            }
+            .buttonBox{
+                gap: 8px;
+                padding-bottom: 20px;
+                .addBasket, .heart{
+                    height: 45px;
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .addBasket{
+                    gap: 0px;
+                    padding-inline: 13.79px 5.79px;
+                    width: 100%;
+                    span{
+                        font-weight: 500;
+                        font-size: 14px;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    .mobile{
+                        display: none;
+                    }
+                    .desktop{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                    }
+                }
+                .heart{
+                    border-radius: 12px;
+                    min-height: 45px;
+                    min-width: 45px;
+                    max-height: 45px;
+                    max-width: 45px;
+                }
             }
         }
     }

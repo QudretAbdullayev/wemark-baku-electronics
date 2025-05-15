@@ -48,5 +48,12 @@
                 color: var(--counter-color);
             }
         }
+        .compare{
+            svg{
+                path{
+                    fill: var(--text-svg-color);
+                }
+            }
+        }
     }
 }

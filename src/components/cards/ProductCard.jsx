@@ -2,6 +2,8 @@ import Star from '@/svg/Star'
 import styles from '../../styles/components/cards/productCard.module.scss'
 import Chat from '@/svg/Chat'
 import Image from 'next/image'
+import Heart from '@/svg/Heart'
+import AddBasket from '@/svg/AddBasket'
 
 const ProductCard = ({product}) => {
   return (
@@ -13,6 +15,8 @@ const ProductCard = ({product}) => {
             fill
             src={product.image}
           />
+          <span className={styles.discountPercantage}></span>
+          <span className={styles.compare}></span>
         </div>
         <div className={styles.descBox}>
           <div className={styles.ratingComment}>
@@ -23,16 +27,24 @@ const ProductCard = ({product}) => {
         </div>
         <div className={styles.priceBox}>
           <div className={styles.prices}>
-            <span className={styles.price}>{product.price}</span>
-            <span className={styles.discountedPrice}>{product.discounted_price}</span>
+            <span className={styles.price}>{product.price} ₼</span>
+            <span className={styles.discountedPrice}>{product.discounted_price} ₼</span>
           </div>
           <div className={styles.line}></div>
+
           <div className={styles.perMonth}>
-            <span className={styles.month}>{product.perMonth.month}</span>
-            <span className={styles.monthPrice}>{product.perMonth.price}</span>
+            <span className={styles.month}>{product.perMonth.month} ay</span>
+            <span className={styles.monthPrice}>{product.perMonth.price} ₼</span>
           </div>
         </div>
-        <div className={styles.buttonBox}></div>
+        <div className={styles.buttonBox}>
+          <button className={styles.addBasket}>
+            <AddBasket/>
+            <span className={styles.mobile}>Səbətə at</span>
+            <span className={styles.desktop}>Səbətə əlavə et</span>
+          </button>
+          <button className={styles.heart}><Heart/></button>
+        </div>
       </div>
     </div>
   )

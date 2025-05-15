@@ -12,7 +12,7 @@ const UserButtons = () => {
   console.log(compareCounter)
   return (
     <div className={styles.userButtons}>
-        <button className={styles.userButton}>
+        <button className={`${styles.userButton} ${styles.compare}`}>
             <Compare/>
             {compareCounter>0 && <span className={styles.counter}>{compareCounter}</span>}
         </button>

@@ -85,11 +85,24 @@
     stroke: var(--text-svg-color);
   }
 }
-.compareSVG{
+
+.starSVG{
   path{
-    fill: var(--text-svg-color);
+    stroke: var(--red-color-1);
+    fill: var(--red-color-1);
   }
 }
+
+.addBasketSVG{
+  path{
+    stroke: var(--text-svg-color);
+    &:last-child, &:nth-child(4){
+      fill: var(--text-svg-color);
+    }
+  }
+
+}
+
 .basketSVG{
   path{
     stroke: var(--text-svg-color);

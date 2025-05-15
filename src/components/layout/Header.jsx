@@ -17,9 +17,11 @@ const Header = () => {
   // dark-light hissəsi
   const [theme, setTheme] = useState('light');
   useEffect(() => {
-    const themeStorage = localStorage.getItem('dark') || 'light';
-    setTheme(themeStorage);
+    if(localStorage.getItem('theme')){
+      const themeStorage = localStorage.getItem('theme');
+      setTheme(themeStorage);
     document.body.setAttribute('data-theme', themeStorage);
+    }
   }, []);
 
   const changeTheme = () => {
