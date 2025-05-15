@@ -1,0 +1,79 @@
+@import '../../abstracts/variables.scss';
+
+.productCard{
+    height: 263px;
+    .container{
+        box-shadow: 0px 8.2px 11.79px 0px #00000003;
+        border-radius: 10px;
+        background-color: var(--nav-background);
+        height: 243px;
+        position: relative;
+        padding-inline: 11px;
+        .imageBox{
+            transform: translateY(-20px);
+            border: 0.51px solid var(--product-card-image-border);
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 20px 0 -11px 0;
+            border-radius: 10px;
+            height: 120px;
+            overflow: hidden;
+            img{
+                position: static !important;
+                height: 120px !important;
+                width: auto !important;
+                object-fit: cover;
+                width: auto;
+                height: auto;
+            }
+        }
+        .descBox{
+            .ratingComment{
+                display: none;
+            }
+            .title{
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: var(--special-offer-desc-color);
+            }
+        }
+        .priceBox{
+            padding: 16px 0 18.26px 0;
+            display: flex;
+            .prices, .perMonth{
+                display: flex;
+                flex-direction: column;
+                gap: 0.6px;
+                .price, .month{
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-decoration: line-through;
+                }
+                .discountedPrice, .monthPrice{
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 109.00000000000001%;
+                    letter-spacing: 0%;
+                }
+            }
+            .price{
+                padding-right: 11.27px;
+            }
+            .perMonth{
+                padding-left: 11.27px;
+            }
+            .line{
+                width: 0.51px;
+                height: 100%;
+                background-color: #DEDEDE;
+            }
+        }
+    }
+}

@@ -68,6 +68,11 @@
             }
         }
     }
+    .products{
+        display: grid;
+        gap: 24px 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: $screen-size) {
@@ -96,6 +101,10 @@
                     }
                 }
             }
+        }
+        .products{
+            gap: 31px 29px;
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

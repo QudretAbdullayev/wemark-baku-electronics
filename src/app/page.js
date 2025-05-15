@@ -1,6 +1,5 @@
 import BannerSlider from "@/components/sliders/BannerSliders";
 import styles from "./page.module.scss";
-import Header from "@/components/layout/Header";
 import InfoCards from "@/components/grid/InfoCards";
 import SpecialOffers from "@/components/grid/SpecialOffers";
 
@@ -31,11 +30,10 @@ export default async function HomePage() {
   const infoCardsData = await getInfoCardsData();
   const productsData = await getProductsData();  
   return (
-    <div className={styles.page}>
-      <Header/>
+    <main className={styles.page}>
       <BannerSlider sliders={slidersData}/>
       <InfoCards infoDataCards={infoCardsData}/>
       <SpecialOffers productsData={productsData}/>
-    </div>
+    </main>
   );
 }

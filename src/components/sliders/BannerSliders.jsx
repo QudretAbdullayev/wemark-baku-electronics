@@ -27,7 +27,7 @@ const BannerSliders = (sliders) => {
             nextEl: `.${styles.cardsRightButton}`,
           }}
           breakpoints={{
-            1024: {
+            1200: {
               slidesPerView: 1.29,
               spaceBetween: 30
               },

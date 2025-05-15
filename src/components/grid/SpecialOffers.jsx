@@ -1,10 +1,11 @@
 'use client'
 import { useState } from 'react'
 import styles from '../../styles/components/grid/specialOffers.module.scss'
+import ProductCard from '../cards/ProductCard'
 
 const SpecialOffers = ({productsData}) => {
   const [activeButton, setActiveButton] = useState('all')
-  console.log(productsData)
+  console.log(productsData[0].products)
   return (
     (productsData!==null && productsData.length>0) &&
     <div className={styles.specialOffers}>
@@ -24,7 +25,11 @@ const SpecialOffers = ({productsData}) => {
                 </div>
             </div>
         </div>
-        <div className={styles.products}></div>
+        <div className={styles.products}>
+            {productsData[0].products.map((product)=>(
+                <ProductCard key={product.id} product={product}/>
+            ))}
+        </div>
     </div>
   )
 }

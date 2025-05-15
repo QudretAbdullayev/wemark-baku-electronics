@@ -40,7 +40,7 @@ const Header = () => {
                 <Link href="/diger">Digər</Link>
             </div>
             <div className={styles.right}>
-                <Link className={styles.old} href='/old-version'>Əvvəlki versiyaya keçid</Link>
+                <Link className={styles.old} href='https://www.bakuelectronics.az/'>Əvvəlki versiyaya keçid</Link>
                 <div className={styles.language}>
                     <span id='langTitle' className={styles.langTitle}>Aze</span>
                     <ArrowDown/>
