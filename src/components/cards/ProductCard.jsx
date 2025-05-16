@@ -1,3 +1,5 @@
+'use client'
+
 import Star from '@/svg/Star'
 import styles from '../../styles/components/cards/productCard.module.scss'
 import Chat from '@/svg/Chat'
@@ -5,19 +7,36 @@ import Image from 'next/image'
 import Heart from '@/svg/Heart'
 import AddBasket from '@/svg/AddBasket'
 import Compare from '@/svg/Compare'
+import { useState } from 'react'
 
 const ProductCard = ({product}) => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <div className={styles.productCard}>
       <div className={styles.container}>
         <div className={styles.imageBox}>
+          {isLoading && (
+            <div className={styles.loader}>
+              <span className={styles.spinner}></span>
+            </div>
+          )}
           <Image 
             alt={product.name}
             fill
             src={product.image}
+            style={{
+              objectFit: 'cover',
+              opacity: isLoading ? 0 : 1,
+              transition: 'opacity 0.3s ease-in-out',
+            }}
+            onLoadingComplete={() => setIsLoading(false)}
           />
-          <span className={styles.discountPercantage}>-{Math.round(Number(product.discount)/product.price * 100)}%</span>
-          <span className={styles.compare}><Compare/></span>
+          {!isLoading && 
+          <>
+            <span className={styles.discountPercantage}>-{Math.round(Number(product.discount)/product.price * 100)}%</span>
+            <span className={styles.compare}><Compare/></span>
+          </>
+          }
         </div>
         <div className={styles.descBox}>
           <div className={styles.ratingComment}>

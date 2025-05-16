@@ -17,7 +17,6 @@ const SpecialOffers = ({productsData}) => {
     let counter = 0;
     if(key===-1){
         for (let i = 0; i < productsData.length; i++) {
-            console.log(productsNewData.length, i)
             if(productsNewData.length===8 || totalCount===productsNewData){
                 break
             }else{

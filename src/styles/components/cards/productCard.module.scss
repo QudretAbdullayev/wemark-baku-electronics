@@ -13,7 +13,7 @@
         .imageBox{
             transform: translateY(-20px);
             border: 0.51px solid var(--product-card-image-border);
-            background-color: white;
+            background-color: var(--white-text-color);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -28,8 +28,6 @@
                 height: 120px !important;
                 width: auto !important;
                 object-fit: cover;
-                width: auto;
-                height: auto;
             }
             .discountPercantage{
                 position: absolute;
@@ -74,6 +72,33 @@
                         path{
                             stroke: var(--red-color-1);
                         }
+                    }
+                }
+            }
+            .loader {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: var(--white-text-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                .spinner {
+                    width: 40px;
+                    height: 40px;
+                    border: 4px solid var(--red-color-1);
+                    border-top: 4px solid var(--pink-color-1);
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                }
+                @keyframes spin {
+                    0% {
+                      transform: rotate(0deg);
+                    }
+                  
+                    100% {
+                      transform: rotate(360deg);
                     }
                 }
             }

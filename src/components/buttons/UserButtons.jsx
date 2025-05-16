@@ -9,7 +9,6 @@ import { useState } from 'react'
 const UserButtons = () => {
   const [basketCounter, setBasketCounter] = useState(0)
   const [compareCounter, setCompareCounter] = useState(1)
-  console.log(compareCounter)
   return (
     <div className={styles.userButtons}>
         <button className={`${styles.userButton} ${styles.compare}`}>
