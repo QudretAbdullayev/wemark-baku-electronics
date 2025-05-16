@@ -80,6 +80,15 @@
     }
 }
 
+@media (min-width: $screen-tablet-size) {
+    .specialOffers{
+        .products{
+            gap: 31px 29px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding-bottom: 114px;
+        }
+    }
+}
 @media (min-width: $screen-size) {
     .specialOffers{
         gap: 35px;
@@ -109,9 +118,7 @@
             }
         }
         .products{
-            gap: 31px 29px;
-            grid-template-columns: repeat(4, 1fr);
-            padding-bottom: 114px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
         }
     }
 }

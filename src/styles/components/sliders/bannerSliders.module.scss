@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--background-color);
-    margin-bottom: 25px;
+    margin: 27px 0 25px 0;
     position: relative;
     width: 100%;
     .swiperButton {
@@ -38,7 +38,7 @@
 
 @media (min-width: $screen-size) {
     .sliders{
-        margin-bottom: 30px;
+        margin: 30px 0 30px 0;
         .swiperButton {
             box-shadow: 0px 5px 15px 0px #0000001A;
             width: 50px;
