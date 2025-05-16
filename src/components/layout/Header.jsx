@@ -23,6 +23,9 @@ const Header = () => {
       const themeStorage = localStorage.getItem('theme');
       setTheme(themeStorage);
     document.body.setAttribute('data-theme', themeStorage);
+    }else{
+      localStorage.setItem('theme', 'light');
+      setTheme(newTheme);
     }
   }, []);
 
